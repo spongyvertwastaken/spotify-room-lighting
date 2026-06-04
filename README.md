@@ -2,13 +2,12 @@
 
 Spotify Room Lighting is a Windows desktop app that syncs Smart Life/Tuya room lights to the album artwork of the Spotify song currently playing.
 
-This guide is for the installed `.exe` version. After installation, you do not need VS Code, a terminal, Node, Python, or this project folder.
+This is a simple guide to install the app.
 
 ## What You Need
 
 - A Windows PC.
 - A Spotify account.
-- Spotify Desktop or Spotify running on another active device.
 - Smart Life/Tuya lights already added in the Smart Life app.
 - The installer file:
 
@@ -18,11 +17,7 @@ Spotify Room Lighting_0.1.0_x64-setup.exe
 
 ## Install The App
 
-1. Close any already running copy of Spotify Room Lighting.
-2. Run `Spotify Room Lighting_0.1.0_x64-setup.exe`.
-3. If Windows SmartScreen appears, choose More info, then Run anyway.
-4. Finish the installer.
-5. Open Spotify Room Lighting from the Start Menu or desktop shortcut.
+run the setup.exe file
 
 The app starts a bundled local backend automatically. If you see `backend loading`, wait a few seconds.
 
@@ -34,7 +29,7 @@ Settings are saved locally on your PC:
 %APPDATA%\SpotifyRoomLighting
 ```
 
-This is where Spotify tokens and app settings live. Your secrets are not baked into the installer.
+This is where Spotify tokens and app settings live. 
 
 ## Step 1: Create Spotify Credentials
 
@@ -116,6 +111,12 @@ For most US/Canada Smart Life accounts, the app region in Spotify Room Lighting 
 us
 ```
 
+the others can find their data center location here:
+
+```text
+https://developer.tuya.com/en/docs/iot/oem-app-data-center-distributed?id=Kafi0ku9l07qb
+```
+
 6. Open your project.
 7. On the Overview tab, copy:
 
@@ -136,7 +137,7 @@ Smart Home Basic Service
 10. Go to Devices.
 11. Link your Smart Life app account if you have not already.
 12. Confirm your bulbs appear online.
-13. Confirm Device Permission says Controllable.
+13. Change Device Permission says Controllable.
 
 ## Step 4: Add Tuya To The App
 
@@ -147,7 +148,7 @@ Smart Home Basic Service
 ```text
 Tuya Access ID
 Tuya Access Secret
-Tuya Region: us
+Tuya Region: YOUR_REGION
 Default Light Adapter: tuya-cloud
 Smart Lights: enabled
 ```
@@ -170,7 +171,7 @@ Example:
   {
     "name": "top 2",
     "type": "bulb",
-    "brand": "HiFiLUZ",
+    "brand": "HiFiLUZ", 
     "adapter": "tuya-cloud",
     "device_id": "DEVICE_ID_HERE",
     "enabled": true,
@@ -178,16 +179,6 @@ Example:
   }
 ]
 ```
-
-For `tuya-cloud`, do not add:
-
-```text
-local_key
-ip
-version
-```
-
-Those are only for optional local Tuya control and are not needed here.
 
 5. Click Save.
 6. Click Test Lights.
@@ -362,30 +353,10 @@ Lights change one by one:
 That is normal for Tuya Cloud. The app sends commands per device.
 ```
 
-Installer says file cannot be written:
-
-```text
-Spotify Room Lighting is still running. Close it from the app window or Task Manager, then click Retry.
-```
-
 Windows warns about the installer:
 
 ```text
 The installer is unsigned. This is normal for a homemade build.
-```
-
-## Sending The App To A Friend
-
-Send this file:
-
-```text
-Spotify Room Lighting_0.1.0_x64-setup.exe
-```
-
-Do not send only:
-
-```text
-spotify-room-lighting.exe
 ```
 
 The setup file installs the desktop app in the correct layout with the bundled backend.
