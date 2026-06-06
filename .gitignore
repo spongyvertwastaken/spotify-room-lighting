@@ -1,7 +1,0 @@
-*.log
-.env
-.env.*
-settings.json
-spotify_token.json
-tinytuya.json
-*.tmp
