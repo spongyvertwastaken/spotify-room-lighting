@@ -12,14 +12,14 @@ This is a simple guide to install the app.
 - The installer file:
 
 ```text
-Spotify Room Lighting_0.2.3_x64-setup.exe
+Spotify Room Lighting_0.2.4_x64-setup.exe
 ```
 
 ## Install The App
 
 run the setup.exe file
 
-The app starts a bundled local backend automatically. If you see `backend loading`, wait a few seconds.
+On launch you will see a dark screen with a spinner ("Starting Spotify Room Lighting") for a few seconds while the app and its bundled local backend start up. This is normal. If you see `backend loading` after that, give it another moment.
 
 ## Where Settings Are Saved
 
@@ -285,7 +285,9 @@ Lower update speed can feel faster, but may annoy Tuya Cloud or make commands fa
 By default the lights do not just hold one color per song. Each bulb gently
 fades and cycles through the current album's colors, offset from the other
 bulbs so the colors drift across the room, with a soft brightness "breath".
-When playback is paused or stopped, the lights keep a calmer, dimmer drift going.
+When you skip to a new song the lights jump straight to that song's colors, then
+keep drifting. When playback is paused or stopped, the lights keep a calmer,
+dimmer drift going.
 
 In Settings:
 
