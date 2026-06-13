@@ -12,7 +12,7 @@ This is a simple guide to install the app.
 - The installer file:
 
 ```text
-Spotify Room Lighting_0.2.0_x64-setup.exe
+Spotify Room Lighting_0.2.3_x64-setup.exe
 ```
 
 ## Install The App
