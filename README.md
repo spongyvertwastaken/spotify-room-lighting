@@ -12,7 +12,7 @@ This is a simple guide to install the app.
 - The installer file:
 
 ```text
-Spotify Room Lighting_0.1.0_x64-setup.exe
+Spotify Room Lighting_0.2.0_x64-setup.exe
 ```
 
 ## Install The App
@@ -279,6 +279,25 @@ Update Speed: 350
 ```
 
 Lower update speed can feel faster, but may annoy Tuya Cloud or make commands fail. Keep it around `300-500` unless you know your setup can handle more.
+
+## Ambient Animation
+
+By default the lights do not just hold one color per song. Each bulb gently
+fades and cycles through the current album's colors, offset from the other
+bulbs so the colors drift across the room, with a soft brightness "breath".
+When playback is paused or stopped, the lights keep a calmer, dimmer drift going.
+
+In Settings:
+
+```text
+Breathing / cycle: turn the animation on or off (off = one steady color per bulb)
+Speed: slow / medium / fast
+Idle drift: keep drifting while paused or stopped
+Transition (ms): how smooth the color fades are (0 = instant changes)
+```
+
+Slower speeds and fewer bulbs are gentler on Tuya Cloud. Very fast speeds with
+many bulbs send a lot of commands and may be throttled.
 
 ## Tuya Data Center Error 28841107
 
